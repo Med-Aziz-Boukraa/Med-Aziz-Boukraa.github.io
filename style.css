@@ -67,6 +67,9 @@ h2 {
 ul, ol {
   margin-left: 1.5rem;
 }
+a {
+  color: #00509e;
+}
 
 /* Footer */
 footer {
