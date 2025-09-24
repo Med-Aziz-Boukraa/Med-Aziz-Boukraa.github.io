@@ -1,31 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<header>
-  <img src="PhotoProfile.png" alt="Profile photo of Mohamed Aziz Boukraa" class="profile-pic">
-  <h1>👋 Mohamed Aziz Boukraa</h1>
-  <p>Postdoctoral Researcher | Structural Health Monitoring • Inverse Problems • Seismic Imaging</p>
-  <p><strong>University of Oslo (DSB, Informatics Department)</strong></p>
-</header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mohamed Aziz Boukraa – Research CV</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#interests">Research Interests</a></li>
+      <li><a href="#project">Current Project</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#talks">Talks</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#positions">Positions</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header -->
   <header>
-    <h1>👋 Mohamed Aziz Boukraa</h1>
+    <img src="PhotoProfile.png" alt="Profile photo of Mohamed Aziz Boukraa" class="profile-pic">
+    <h1>Mohamed Aziz Boukraa</h1>
     <p>Postdoctoral Researcher | Structural Health Monitoring • Inverse Problems • Seismic Imaging</p>
     <p><strong>University of Oslo (DSB, Informatics Department)</strong></p>
   </header>
 
   <main>
-    <section>
+    <!-- About -->
+    <section id="about">
       <h2>ℹ️ About Me</h2>
       <p>
-        I am a postdoctoral researcher at the Department of Informatics, University of Oslo, working on 
-        Full Waveform Inversion (FWI) for non-destructive seismic imaging of hydroelectric dams. 
+        I am a postdoctoral researcher at the University of Oslo, working on Full Waveform Inversion (FWI) for non-destructive seismic imaging of hydroelectric dams. 
         My research lies at the intersection of applied mathematics, geophysics, signal processing, and machine learning. 
-        Previously, I was a postdoctoral researcher at INRIA/EDF/ENSTA (IDEFIX group, France) and obtained my PhD 
-        in Applied Mathematics at the University of Caen Normandy.  
+        Previously, I was a postdoctoral researcher at INRIA/EDF/ENSTA (IDEFIX group, France) and obtained my PhD in Applied Mathematics at the University of Caen Normandy.  
       </p>
     </section>
 
-    <section>
+    <!-- Research Interests -->
+    <section id="interests">
       <h2>🧑‍🔬 Research Interests</h2>
       <ul>
         <li>Structural Health Monitoring (SHM) of large infrastructures</li>
@@ -35,7 +51,8 @@
       </ul>
     </section>
 
-    <section>
+    <!-- Current Project -->
+    <section id="project">
       <h2>🏗️ Current Project – FWI-DAMS</h2>
       <p>Developing non-destructive seismic imaging tools for hydroelectric dams. Focus areas:</p>
       <ul>
@@ -45,40 +62,49 @@
       </ul>
     </section>
 
-    <section>
+    <!-- Publications -->
+    <section id="publications">
       <h2>📚 Publications</h2>
       <ol>
-        <li><strong>Boukraa, M. A., Audibert, L., Bonazzoli, M., Haddar, H., & Vautrin, D.</strong><br>
-        High-Resolution Seismic Imaging for Dam-Rock Interface using Full-Waveform Inversion.<br>
-        <em>Wave Propagation Conf., Berlin, 2024.</em> 
-        <a href="https://doi.org/10.17617/3.MBE4AA">DOI</a></li>
-
-        <li><strong>Boukraa, M. A., Bonazzoli, M., Haddar, H., Audibert, L., & Vautrin, D.</strong><br>
-        Imaging a dam-rock interface with inversion of a full elastic-acoustic model.<br>
-        <em>ICIPE 2024, Brazil.</em> 
-        <a href="https://uca.hal.science/hal-04661884">HAL</a></li>
-
-        <li><strong>Boukraa, M. A., Audibert, L., Bonazzoli, M., Haddar, H., & Vautrin, D.</strong><br>
-        Imagerie d’interface barrage-fondation par inversion de forme d’onde complète.<br>
-        <em>E3S Web Conf., vol. 504, p. 04002, 2024.</em> 
-        <a href="https://doi.org/10.1051/e3sconf/202450404002">DOI</a></li>
-
-        <li><strong>Boukraa, M. A., Amdouni, S., & Delvare, F.</strong><br>
-        Fading regularization FEM algorithms for the Cauchy problem associated with the two-dimensional biharmonic equation.<br>
-        <em>Mathematical Methods in the Applied Sciences, 46(2), 2389–2412, 2023.</em> 
-        <a href="https://doi.org/10.1002/mma.8651">DOI</a></li>
-
-        <li><strong>Boukraa, M. A., Caillé, L., & Delvare, F.</strong><br>
-        Fading regularization method for an inverse boundary value problem associated with the biharmonic equation.<br>
-        <em>Journal of Computational and Applied Mathematics, 457, 116285, 2025.</em></li>
-
-        <li><strong>Boukraa, M. A.</strong><br>
-        Méthodes inverses à régularisation évanescente pour l'identification de conditions aux limites en théorie des plaques minces.<br>
-        <em>Doctoral dissertation, Normandie Université, 2021.</em></li>
+        <li>
+          <strong>Boukraa, M. A., Audibert, L., Bonazzoli, M., Haddar, H., & Vautrin, D.</strong>  
+          High-Resolution Seismic Imaging for Dam-Rock Interface using Full-Waveform Inversion.  
+          <em>Wave Propagation Conf., Berlin, 2024.</em>  
+          <a href="https://doi.org/10.17617/3.MBE4AA">DOI</a>
+        </li>
+        <li>
+          <strong>Boukraa, M. A., Bonazzoli, M., Haddar, H., Audibert, L., & Vautrin, D.</strong>  
+          Imaging a dam-rock interface with inversion of a full elastic-acoustic model.  
+          <em>ICIPE 2024, Brazil.</em>  
+          <a href="https://uca.hal.science/hal-04661884">HAL</a>
+        </li>
+        <li>
+          <strong>Boukraa, M. A., Audibert, L., Bonazzoli, M., Haddar, H., & Vautrin, D.</strong>  
+          Imagerie d’interface barrage-fondation par inversion de forme d’onde complète.  
+          <em>E3S Web Conf., vol. 504, p. 04002, 2024.</em>  
+          <a href="https://doi.org/10.1051/e3sconf/202450404002">DOI</a>
+        </li>
+        <li>
+          <strong>Boukraa, M. A., Amdouni, S., & Delvare, F.</strong>  
+          Fading regularization FEM algorithms for the Cauchy problem associated with the two-dimensional biharmonic equation.  
+          <em>Mathematical Methods in the Applied Sciences, 46(2), 2389–2412, 2023.</em>  
+          <a href="https://doi.org/10.1002/mma.8651">DOI</a>
+        </li>
+        <li>
+          <strong>Boukraa, M. A., Caillé, L., & Delvare, F.</strong>  
+          Fading regularization method for an inverse boundary value problem associated with the biharmonic equation.  
+          <em>Journal of Computational and Applied Mathematics, 457, 116285, 2025.</em>
+        </li>
+        <li>
+          <strong>Boukraa, M. A.</strong>  
+          Méthodes inverses à régularisation évanescente pour l'identification de conditions aux limites en théorie des plaques minces.  
+          <em>Doctoral dissertation, Normandie Université, 2021.</em>
+        </li>
       </ol>
     </section>
 
-    <section>
+    <!-- Talks -->
+    <section id="talks">
       <h2>🎤 Talks & Conferences</h2>
       <ul>
         <li>Shear-wave speed estimation in ultrasound time-harmonic elastography, Picof2025, Hammamet, Tunisia.</li>
@@ -90,7 +116,8 @@
       </ul>
     </section>
 
-    <section>
+    <!-- Education -->
+    <section id="education">
       <h2>🎓 Education</h2>
       <ul>
         <li><strong>PhD (2021)</strong> – Applied Mathematics, University of Caen Normandy, France</li>
@@ -99,7 +126,8 @@
       </ul>
     </section>
 
-    <section>
+    <!-- Positions -->
+    <section id="positions">
       <h2>👩‍💻 Positions</h2>
       <ul>
         <li>Postdoctoral Research Fellow – University of Oslo (2024–present)</li>
@@ -109,7 +137,8 @@
       </ul>
     </section>
 
-    <section>
+    <!-- Contact -->
+    <section id="contact">
       <h2>📫 Contact</h2>
       <p>Email: <a href="mailto:mohambo@ifi.uio.no">mohambo@ifi.uio.no</a></p>
       <p>
@@ -121,7 +150,7 @@
   </main>
 
   <footer>
-    <p>© 2025 Mohamed Aziz Boukraa</p>
+    <p>© 2025 Mohamed Aziz Boukraa | <a href="CV_AURORA_Aziz.pdf" target="_blank">Download CV</a></p>
   </footer>
 </body>
 </html>
