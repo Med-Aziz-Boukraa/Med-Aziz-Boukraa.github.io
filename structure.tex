@@ -1,83 +1,94 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Wilson Resume/CV
-% Structure Specification File
-% Version 1.0 (22/1/2015)
-%
-% This file has been downloaded from:
-% http://www.LaTeXTemplates.com
-%
-% License:
-% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
-%
+% Clean CV Structure File
+% Based on Wilson Resume/CV
+% Simplified + modernized for XeLaTeX
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%   PACKAGES AND CONFIGURATION
 %----------------------------------------------------------------------------------------
 
-\usepackage[a4paper, hmargin=23mm, vmargin=30mm, top=20mm]{geometry} % Use A4 paper and set margins
+\usepackage[a4paper, hmargin=23mm, vmargin=30mm, top=20mm]{geometry} % Margins
 
-\usepackage{fancyhdr} % Customize the header and footer
+\usepackage{fancyhdr}   % Header & footer
+\usepackage{lastpage}   % For page count
 
-\usepackage{lastpage} % Required for calculating the number of pages in the document
+\setcounter{secnumdepth}{0} % No section numbering
 
-\usepackage{hyperref} % Colors for links, text and headings
 
-\setcounter{secnumdepth}{0} % Suppress section numbering
 
-%\usepackage[proportional,scaled=1.064]{erewhon} % Use the Erewhon font
-%\usepackage[erewhon,vvarbb,bigdelims]{newtxmath} % Use the Erewhon font
-\usepackage[utf8]{inputenc} % Required for inputting international characters
-\usepackage[T1]{fontenc} % Output font encoding for international characters
-
-\usepackage{fontspec} % Required for specification of custom fonts
+% --- Fonts ---
+\usepackage{fontspec} % Use system fonts
 \setmainfont[Path = ./fonts/,
-Extension = .otf,
-BoldFont = Erewhon-Bold,
-ItalicFont = Erewhon-Italic,
-BoldItalicFont = Erewhon-BoldItalic,
-SmallCapsFeatures = {Letters = SmallCaps}
+  Extension = .otf,
+  BoldFont = Erewhon-Bold,
+  ItalicFont = Erewhon-Italic,
+  BoldItalicFont = Erewhon-BoldItalic,
+  SmallCapsFeatures = {Letters = SmallCaps}
 ]{Erewhon-Regular}
 
-\usepackage{color} % Required for custom colors
+% --- Colors ---
+\usepackage{color}
 \definecolor{slateblue}{rgb}{0.17,0.22,0.34}
 
-\usepackage{sectsty} % Allows customization of titles
-\sectionfont{\color{slateblue}} % Color section titles
+% --- Section formatting ---
+\usepackage{sectsty}
+\sectionfont{\color{slateblue}}
 
-\fancypagestyle{plain}{\fancyhf{}\cfoot{\thepage\ of \pageref{LastPage}}} % Define a custom page style
-\pagestyle{plain} % Use the custom page style through the document
-\renewcommand{\headrulewidth}{0pt} % Disable the default header rule
-\renewcommand{\footrulewidth}{0pt} % Disable the default footer rule
+% --- URL + hyperlinks ---
+\usepackage{xurl}       % Allow line breaks in long URLs
+\usepackage{hyperref}
+\hypersetup{
+  breaklinks=true,
+  colorlinks=true,
+  urlcolor=blue,
+  linkcolor=slateblue,
+  citecolor=slateblue
+}
 
-\setlength\parindent{0pt} % Stop paragraph indentation
+% --- Page style ---
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \cfoot{\thepage\ of \pageref{LastPage}}%
+}
+\pagestyle{plain}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% --- Paragraphs ---
+\setlength\parindent{0pt}
+
+%----------------------------------------------------------------------------------------
+%   CUSTOM ENVIRONMENTS AND COMMANDS
+%----------------------------------------------------------------------------------------
 
 % Non-indenting itemize
 \newenvironment{itemize-noindent}
-{\setlength{\leftmargini}{0em}\begin{itemize}}
-{\end{itemize}}
+  {\setlength{\leftmargini}{0em}\begin{itemize}}
+  {\end{itemize}}
 
-% Text width for tabbing environments
+% Adjusted text width for tabbing blocks
 \newlength{\smallertextwidth}
 \setlength{\smallertextwidth}{\textwidth}
 \addtolength{\smallertextwidth}{-2cm}
 
-\newcommand{\sqbullet}{~\vrule height 1ex width .8ex depth -.2ex} % Custom square bullet point definition
+% Custom bullet
+\newcommand{\sqbullet}{~\vrule height 1ex width .8ex depth -.2ex}
 
 %----------------------------------------------------------------------------------------
-%	MAIN HEADER COMMAND
+%   HEADER COMMAND
 %----------------------------------------------------------------------------------------
 
-\renewcommand{\title}[1]{
-{\huge{\color{slateblue}\textbf{#1}}}\\ % Header section name and color
-\rule{\textwidth}{0.5mm}\\ % Rule under the header
+\renewcommand{\title}[1]{%
+  {\huge{\color{slateblue}\textbf{#1}}}\\[2pt]
+  \rule{\textwidth}{0.5mm}\\
 }
 
 %----------------------------------------------------------------------------------------
-%	JOB COMMAND
+%   JOB COMMAND
 %----------------------------------------------------------------------------------------
 
-\newcommand{\job}[6]{
+\newcommand{\job}[6]{%
 \begin{tabbing}
 \hspace{2cm} \= \kill
 \textbf{#1} \> \href{#4}{#3} \\
@@ -91,10 +102,10 @@ SmallCapsFeatures = {Letters = SmallCaps}
 }
 
 %----------------------------------------------------------------------------------------
-%	SKILL GROUP COMMAND
+%   SKILL GROUP COMMAND
 %----------------------------------------------------------------------------------------
 
-\newcommand{\skillgroup}[2]{
+\newcommand{\skillgroup}[2]{%
 \begin{tabbing}
 \hspace{5mm} \= \kill
 \sqbullet \>\+ \textbf{#1} \\
@@ -106,10 +117,10 @@ SmallCapsFeatures = {Letters = SmallCaps}
 }
 
 %----------------------------------------------------------------------------------------
-%	INTERESTS GROUP COMMAND
-%-----------------------------------------------------------------------------------------
+%   INTERESTS
+%----------------------------------------------------------------------------------------
 
-\newcommand{\interestsgroup}[1]{
+\newcommand{\interestsgroup}[1]{%
 \begin{tabbing}
 \hspace{5mm} \= \kill
 #1
@@ -117,13 +128,13 @@ SmallCapsFeatures = {Letters = SmallCaps}
 \vspace{-10mm}
 }
 
-\newcommand{\interest}[1]{\sqbullet \> \textbf{#1}\\[3pt]} % Define a custom command for individual interests
+\newcommand{\interest}[1]{\sqbullet \> \textbf{#1}\\[3pt]}
 
 %----------------------------------------------------------------------------------------
-%	TABBED BLOCK COMMAND
+%   TABBED BLOCK COMMAND
 %----------------------------------------------------------------------------------------
 
-\newcommand{\tabbedblock}[1]{
+\newcommand{\tabbedblock}[1]{%
 \begin{tabbing}
 \hspace{2cm} \= \hspace{4cm} \= \kill
 #1
