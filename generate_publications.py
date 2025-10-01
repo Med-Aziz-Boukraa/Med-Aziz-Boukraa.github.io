@@ -75,13 +75,13 @@ def format_publication(entry, html=False):
             if doi:
                 line += f' <a href="https://doi.org/{doi}">DOI</a>'
             if hal:
-                line += f' <a href="https://hal.science/{hal}">HAL</a>'
+                line += f' <a href="{hal}">HAL</a>'
         else:
             line = f"\\item {authors}. {title}. \\textit{{{details}}}."
             if doi:
-                line += f" \\url{{https://doi.org/{doi}}}"
-            if hal:
-                line += f" \\url{{https://hal.science/{hal}}}"
+                 line += f": \\href{{https://doi.org/{doi}}}{{{doi}}}"
+            #if hal:
+              #  line += f" \\url{{https://hal.science/{hal}}}"
         return "journal", line
 
     elif etype == "inproceedings":
@@ -98,13 +98,13 @@ def format_publication(entry, html=False):
             if doi:
                 line += f' <a href="https://doi.org/{doi}">DOI</a>'
             if hal:
-                line += f' <a href="https://hal.science/{hal}">HAL</a>'
+                line += f' <a href="{hal}">HAL</a>'
         else:
             line = f"\\item {authors}. {title}. \\textit{{{details}}}."
             if doi:
-                line += f" \\url{{https://doi.org/{doi}}}"
-            if hal:
-                line += f" \\url{{https://hal.science/{hal}}}"
+                line += f": \\href{{https://doi.org/{doi}}}{{\\nolinkurl{{{doi}}}}}"
+            else:
+                line += f": \\href{{{hal}}}{{\\nolinkurl{{{hal}}}}}"
         return "conference", line
 
     return None, None
