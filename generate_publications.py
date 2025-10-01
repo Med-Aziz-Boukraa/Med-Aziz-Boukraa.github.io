@@ -125,13 +125,13 @@ def format_talk(entry, html=False):
 
     if html:
         if url:
-            line = f'<a href="{url}">{title}</a>, {details}.'
+            line = f'{title}, {details}. <a href="{url}">🌐 website</a>'
         else:
             line = f"{title}, {details}."
     else:
         line = f"\\item {title}, {details}."
         if url:
-            line += f" \\url{{{url}}}"
+            line += f" \\url{{{url}}}"   # no 🌐 website for LaTeX
 
     return entry.get("type", "other"), line
 
