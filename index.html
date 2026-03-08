@@ -12,7 +12,7 @@
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#interests">Research Interests</a></li>
-      <li><a href="#Current Projects">Current Projects</a></li>
+      <li><a href="#current-projects">Current Projects</a></li>
       <li><a href="#publications">Publications</a></li>
       <li><a href="#talks">Talks</a></li>
       <li><a href="#education">Education</a></li>
@@ -31,21 +31,27 @@
 
   <main>
     <!-- About -->
-    <section id="about">
+    <section id="about" class="section-card">
       <h2>ℹ️ About Me</h2>
+      <p class="section-intro">
+        I am a postdoctoral researcher at the University of Oslo, Norway, working with the
+        <a href="https://www.mn.uio.no/ifi/english/research/groups/dsb/index.html" target="_blank" rel="noopener noreferrer">Digital Signal Processing and Image Analysis (DSB)</a>
+        research group. I develop physics-based inverse methods for imaging applications across
+        geophysics and medical ultrasound.
+      </p>
       <p>
-I am a postdoctoral researcher at the University of Oslo, Norway, working with the <a href="https://www.mn.uio.no/ifi/english/research/groups/dsb/index.html" target="_blank">Digital Signal Processing and Image Analysis (DSB)</a> 
-  research group.
-My main research focus is on the Full-Waveform Inversion (FWI) method, with applications ranging from non-destructive seismic imaging to medical ultrasound elastography.
-My work lies at the intersection of applied mathematics, geophysics, signal processing, and medical imaging.
-Previously, I was a postdoctoral researcher with the <a href="https://idefix.gitlabpages.inria.fr/" target="_blank" rel="noopener noreferrer">IDEFIX</a> team in France, a joint research group between Inria Saclay Centre and EDF R&D. I obtained my PhD in Applied Mathematics from the University of Caen Normandy, France.
+        My work sits at the intersection of applied mathematics, geophysics, signal processing, and
+        medical imaging. Previously, I was a postdoctoral researcher with the
+        <a href="https://idefix.gitlabpages.inria.fr/" target="_blank" rel="noopener noreferrer">IDEFIX</a>
+        team in France, a joint research group between Inria Saclay Centre and EDF R&amp;D. I obtained
+        my PhD in Applied Mathematics from the University of Caen Normandy, France.
       </p>
     </section>
 
     <!-- Research Interests -->
-    <section id="interests">
+    <section id="interests" class="section-card">
       <h2>🧑‍🔬 Research Interests</h2>
-      <ul>
+      <ul class="interest-grid">
         <li>Seismic imaging & Full-Waveform Inversion</li>
         <li>Medical ultrasound elastography</li>
         <li>Non-destructive testing</li>
@@ -53,132 +59,162 @@ Previously, I was a postdoctoral researcher with the <a href="https://idefix.git
       </ul>
     </section>  
 
- <!-- Current Projects -->
-<section id="current-projects">
-  <h2>🧑‍🔬 Current Projects</h2>
+    <!-- Current Projects -->
+    <section id="current-projects" class="projects-section section-card">
+      <h2>🧑‍🔬 Current Projects</h2>
+      <p class="projects-intro">
+        Ongoing work spans medical elastography and seismic imaging, with a shared focus on
+        practical, physics-based inversion methods.
+      </p>
 
-  <!-- Project 1 -->
-  <h3>FULLELASTO — Full-Waveform Inversion for Time-Harmonic Elastography Using Ultrasound Shear Waves (2024–2027)</h3>
+      <div class="project-grid">
+        <article class="project-card featured-project">
+          <div class="project-card-header">
+            <h3>FULLELASTO - Full-Waveform Inversion for Time-Harmonic Elastography Using Ultrasound Shear Waves</h3>
+            <span class="project-years">2024-2027</span>
+          </div>
 
-  <p>
-    <strong>Funding: MSCA COFUND (European Union &amp; University of Oslo)</strong>  —
-    <a href="https://www.uio.no/dscience/english/dstrain/postdoctoral-fellows/aziz-boukraa.html" target="_blank">
-      Postdoctoral Fellow Profile
-    </a>
-  </p>
+          <p class="project-meta">
+            <strong>Funding:</strong> MSCA COFUND (European Union &amp; University of Oslo)
+          </p>
 
-  <p>
-    This research is part of the
-    <a href="https://www.mn.uio.no/ifi/english/research/projects/ultrasound-elastography/index.html" target="_blank">
-      Ultrasound Shear Wave Elastography Project
-    </a>
-    within the
-    <a href="https://www.mn.uio.no/ifi/english/research/groups/dsb/index.html" target="_blank">
-      DSB group
-    </a>.
-    The project aims to advance <strong>medical ultrasound elastography</strong> for estimating tissue mechanical properties, which are essential for tumor detection and disease staging.
-    The elastography team within DSB group focuses on developing ultrasound shear-wave elastography methods using external time-harmonic excitations, with the long-term goal of reconstructing three-dimensional myocardial elasticity maps of the heart.
-    My specific
-    <a href="https://www.uio.no/dscience/english/dstrain/postdoctoral-fellows/aziz-boukraa.html" target="_blank">
-      research project
-    </a>
-    focuses on integrating <strong>Full-Waveform Inversion (FWI)</strong> into shear-wave elastography by explicitly incorporating the physics of wave propagation into the inversion process.
-  </p>
+          <p>
+            Hosted by the
+            <a href="https://www.mn.uio.no/ifi/english/research/groups/dsb/index.html" target="_blank" rel="noopener noreferrer">DSB group</a>,
+            within the
+            <a href="https://www.mn.uio.no/ifi/english/research/projects/ultrasound-elastography/index.html" target="_blank" rel="noopener noreferrer">Ultrasound Shear Wave Elastography Project</a>,
+            this work advances medical elastography for tissue characterization and improved disease staging.
+          </p>
 
-  <!-- Project 2 -->
-  <h3>Seismic Imaging of the Dam–Rock Foundation Interface</h3>
+          <ul class="project-highlights">
+            <li>Integrates Full-Waveform Inversion into ultrasound shear-wave elastography.</li>
+            <li>Uses explicit wave-physics constraints to improve parameter reconstruction.</li>
+            <li>Contributes toward 3D myocardial elasticity mapping of the heart.</li>
+          </ul>
 
-  <p>
-    <strong>Funding: Plan France Relance (2022–2024).</strong>
-    This project was initiated during my previous postdoctoral position with the
-    <a href="https://idefix.gitlabpages.inria.fr/" target="_blank">IDEFIX</a> team in France.
-  </p>
+          <p class="project-links">
+            <a href="https://www.uio.no/dscience/english/dstrain/postdoctoral-fellows/aziz-boukraa.html" target="_blank" rel="noopener noreferrer">Postdoctoral Fellow Profile</a>
+            <a href="https://www.mn.uio.no/ifi/english/research/projects/ultrasound-elastography/index.html" target="_blank" rel="noopener noreferrer">Ultrasound Project</a>
+          </p>
+        </article>
 
-  <p>
-    It is a collaborative project between
-    <a href="https://www.inria.fr/en" target="_blank">INRIA</a> and
-    <a href="https://www.edf.fr/en/the-edf-group/inventing-the-future-of-energy/r-d-global-expertise" target="_blank">EDF R&amp;D</a>,
-    addressing <strong>interface imaging problems</strong> at electricity production sites.
-    The primary case study focuses on imaging the <strong>dam–rock foundation interface</strong>
-    using non-destructive seismic waves, a critical component for ensuring structural stability.
-    Our approach combines <strong>shape optimization techniques</strong> with the
-    <strong>Full-Waveform Inversion</strong> framework to obtain high-resolution images of the interface
-    from seismic measurements acquired non-invasively on the dam wall.
-  </p>
+        <article class="project-card">
+          <div class="project-card-header">
+            <h3>Seismic Imaging of the Dam-Rock Foundation Interface</h3>
+            <span class="project-years">2022-2027</span>
+          </div>
 
-  <p>
-    <strong>AURORA Grants (2026–2027).</strong>
-    Through the <a href="https://www.forskningsradet.no/en/call-for-proposals/2025/aurora-researcher-exchange-norway-france/" target="_blank">AURORA mobility programme</a>  of the Research Council of Norway, funding has been awarded to
-    the project entitled <em>“Full-Waveform Inversion for Dam Safety.”</em>
-    This collaboration aims to strengthen research links between Norwegian research institutions and
-    partner organisations in France.
- 
-    Current work focuses on extending these methodologies to three-dimensional configurations and
-    improving the forward model to ensure applicability under operational conditions.
-  </p>
-</section>
+          <p class="project-meta">
+            <strong>Funding:</strong> Plan France Relance (2022-2024), followed by AURORA mobility funding (2026-2027)
+          </p>
+
+          <p>
+            Initiated with the
+            <a href="https://idefix.gitlabpages.inria.fr/" target="_blank" rel="noopener noreferrer">IDEFIX</a>
+            team as a collaboration between
+            <a href="https://www.inria.fr/en" target="_blank" rel="noopener noreferrer">INRIA</a>
+            and
+            <a href="https://www.edf.fr/en/the-edf-group/inventing-the-future-of-energy/r-d-global-expertise" target="_blank" rel="noopener noreferrer">EDF R&amp;D</a>,
+            this project addresses interface imaging challenges at electricity production sites.
+          </p>
+
+          <ul class="project-highlights">
+            <li>Targets high-resolution imaging of the dam-rock foundation interface.</li>
+            <li>Combines shape optimization with Full-Waveform Inversion for non-invasive seismic data.</li>
+            <li>Extends methodology to 3D settings and more realistic operational forward models.</li>
+          </ul>
+
+          <p class="project-links">
+            <a href="https://www.forskningsradet.no/en/call-for-proposals/2025/aurora-researcher-exchange-norway-france/" target="_blank" rel="noopener noreferrer">AURORA Programme</a>
+          </p>
+
+          <p class="project-note">
+            The AURORA programme is a Norway-France mobility scheme that supports researcher exchanges,
+            joint workshops, and collaboration building between partner institutions. The supported
+            project is titled <em>Full-Waveform Inversion for Dam Safety</em>.
+          </p>
+        </article>
+      </div>
+    </section>
 
 
 
-<section id="publications">
-  <h2>📚 Publications</h2>
+    <section id="publications" class="section-card">
+      <h2>📚 Publications</h2>
 
-  <h3>Journal papers</h3>
-  <!-- BEGIN JOURNALS -->
-<li><strong>Boukraa, M. A.</strong>, Delvare, F., Caillé, L.. Fading regularization method for an inverse boundary value problem associated with the biharmonic equation. <em>Journal of Computational and Applied Mathematics, 440, 115755, 2025</em>. <a href="https://doi.org/10.1016/j.cam.2024.116285">DOI</a> <a href="https://hal.science/hal-04711339v1">HAL</a></li>
-<li><strong>Boukraa, M. A.</strong>, Amdouni, S., Delvare, F.. Fading regularization FEM algorithms for the Cauchy problem associated with the two-dimensional biharmonic equation. <em>Mathematical Methods in the Applied Sciences, 46(2), 2389--2412, 2023</em>. <a href="https://doi.org/10.1002/mma.8651">DOI</a> <a href="https://uca.hal.science/hal-03784466v1">HAL</a></li>
-<!-- END JOURNALS -->
+      <div class="split-grid">
+        <article class="subsection-card">
+          <h3>Journal papers</h3>
+          <ul class="paper-list">
+            <!-- BEGIN JOURNALS -->
+            <li><strong>Boukraa, M. A.</strong>, Delvare, F., Caillé, L.. Fading regularization method for an inverse boundary value problem associated with the biharmonic equation. <em>Journal of Computational and Applied Mathematics, 440, 115755, 2025</em>. <a href="https://doi.org/10.1016/j.cam.2024.116285">DOI</a> <a href="https://hal.science/hal-04711339v1">HAL</a></li>
+            <li><strong>Boukraa, M. A.</strong>, Amdouni, S., Delvare, F.. Fading regularization FEM algorithms for the Cauchy problem associated with the two-dimensional biharmonic equation. <em>Mathematical Methods in the Applied Sciences, 46(2), 2389--2412, 2023</em>. <a href="https://doi.org/10.1002/mma.8651">DOI</a> <a href="https://uca.hal.science/hal-03784466v1">HAL</a></li>
+            <!-- END JOURNALS -->
+          </ul>
+        </article>
 
-  <h3>Conference proceedings</h3>
-  <!-- BEGIN CONFS -->
-<li><strong>Boukraa, M. A.</strong>, Audibert, L., Bonazzoli, M., Haddar, H., Vautrin, D.. High-Resolution Seismic Imaging for Dam-Rock Interface using Full-Waveform Inversion. <em>Waves 2024, Berlin, Germany, 2024</em>. <a href="https://doi.org/10.17617/3.MBE4AA">DOI</a> <a href="https://hal.science/hal-04661907">HAL</a></li>
-<li><strong>Boukraa, M. A.</strong>, Bonazzoli, M., Haddar, H., Audibert, L., Vautrin, D.. Imaging a dam-rock interface with inversion of a full elastic-acoustic model. <em>11th International Conference on Inverse Problems in Engineering (ICIPE 2024), Rio de Janeiro, Brazil, 2024</em>. <a href="https://uca.hal.science/hal-04661884">HAL</a></li>
-<li><strong>Boukraa, M. A.</strong>, Audibert, L., Bonazzoli, M., Haddar, H., Vautrin, D.. Imagerie d’interface barrage-fondation par inversion de forme d’onde complète. <em>E3S Web of Conferences, 2024</em>. <a href="https://doi.org/10.1051/e3sconf/202450404002">DOI</a> <a href="https://inria.hal.science/hal-04528638">HAL</a></li>
-<!-- END CONFS -->
-</section>
+        <article class="subsection-card">
+          <h3>Conference proceedings</h3>
+          <ul class="paper-list">
+            <!-- BEGIN CONFS -->
+            <li><strong>Boukraa, M. A.</strong>, Audibert, L., Bonazzoli, M., Haddar, H., Vautrin, D.. High-Resolution Seismic Imaging for Dam-Rock Interface using Full-Waveform Inversion. <em>Waves 2024, Berlin, Germany, 2024</em>. <a href="https://doi.org/10.17617/3.MBE4AA">DOI</a> <a href="https://hal.science/hal-04661907">HAL</a></li>
+            <li><strong>Boukraa, M. A.</strong>, Bonazzoli, M., Haddar, H., Audibert, L., Vautrin, D.. Imaging a dam-rock interface with inversion of a full elastic-acoustic model. <em>11th International Conference on Inverse Problems in Engineering (ICIPE 2024), Rio de Janeiro, Brazil, 2024</em>. <a href="https://uca.hal.science/hal-04661884">HAL</a></li>
+            <li><strong>Boukraa, M. A.</strong>, Audibert, L., Bonazzoli, M., Haddar, H., Vautrin, D.. Imagerie d’interface barrage-fondation par inversion de forme d’onde complète. <em>E3S Web of Conferences, 2024</em>. <a href="https://doi.org/10.1051/e3sconf/202450404002">DOI</a> <a href="https://inria.hal.science/hal-04528638">HAL</a></li>
+            <!-- END CONFS -->
+          </ul>
+        </article>
+      </div>
+    </section>
 
-<section id="talks">
-  <h2>🎤 Talks</h2>
+    <section id="talks" class="section-card">
+      <h2>🎤 Talks</h2>
 
-  <h3>International Conferences</h3>
-    <!-- BEGIN CONF TALKS -->
-<li>49th Scandinavian Symposium on Physical Acoustics (SSPA 2026), Geilo, Norway, January 2026. <a href="https://www.norskfysisk.no/faggrupper/faggruppe-akustikk/sspa/" style="text-decoration:none">↗️</a></li>
-<li>11th International Conference on Inverse Problems, Control and Shape Optimization (PICOF 2025), Hammamet, Tunisia, October 2025. <a href="https://picof2025.sciencesconf.org/" style="text-decoration:none">↗️</a></li>
-<li>IEEE International Ultrasonics Symposium (IUS 2025), Utrecht, Netherlands, April 2025. <a href="https://2025.ieee-ius.org/" style="text-decoration:none">↗️</a></li>
-<li>Ultrasonic Imaging and Tissue Characterization Conference (UITC 2025), Silver Spring, MD, USA, April 2025.</li>
-<li>48th Scandinavian Symposium on Physical Acoustics (SSPA 2025), Geilo, Norway, January 2025. <a href="https://www.norskfysisk.no/faggrupper/faggruppe-akustikk/sspa/" style="text-decoration:none">↗️</a></li>
-<li>WAVES 2024 (16th International Conference on Mathematical and Numerical Aspects of Wave Propagation), Berlin, Germany, June 2024. <a href="https://waves2024.mps.mpg.de/" style="text-decoration:none">↗️</a></li>
-<li>11th International Conference on Inverse Problems in Engineering (ICIPE24), Rio de Janeiro, Brazil, June 2024. <a href="https://icipe2024.org/" style="text-decoration:none">↗️</a></li>
-<li>11th International Conference on Inverse Problems in Modeling and Simulations (IPMS 2024), Malta, May 2024. <a href="https://www.ipms-conference.org/ipms2024/" style="text-decoration:none">↗️</a></li>
-<li>11th Applied Inverse Problems Conference (AIP 2023), Göttingen, Germany, September 2023. <a href="https://aip2023.de/" style="text-decoration:none">↗️</a></li>
-<li>10th International Conference on Inverse Problems, Control and Shape Optimization (PICOF'22), Caen, France, October 2022. <a href="https://picof22.sciencesconf.org/" style="text-decoration:none">↗️</a></li>
-<li>10th International Conference on Inverse Problems in Engineering (ICIPE20), Francavilla al Mare (Chieti), Italy, May 2022. <a href="https://iopscience.iop.org/article/10.1088/1742-6596/2444/1/011001" style="text-decoration:none">↗️</a></li>
-<!-- END CONF TALKS -->
-  </ul>
+      <div class="split-grid">
+        <article class="subsection-card">
+          <h3>International Conferences</h3>
+          <ul class="talk-list">
+            <!-- BEGIN CONF TALKS -->
+            <li>49th Scandinavian Symposium on Physical Acoustics (SSPA 2026), Geilo, Norway, January 2026. <a href="https://www.norskfysisk.no/faggrupper/faggruppe-akustikk/sspa/">↗️</a></li>
+            <li>11th International Conference on Inverse Problems, Control and Shape Optimization (PICOF 2025), Hammamet, Tunisia, October 2025. <a href="https://picof2025.sciencesconf.org/">↗️</a></li>
+            <li>IEEE International Ultrasonics Symposium (IUS 2025), Utrecht, Netherlands, April 2025. <a href="https://2025.ieee-ius.org/">↗️</a></li>
+            <li>Ultrasonic Imaging and Tissue Characterization Conference (UITC 2025), Silver Spring, MD, USA, April 2025.</li>
+            <li>48th Scandinavian Symposium on Physical Acoustics (SSPA 2025), Geilo, Norway, January 2025. <a href="https://www.norskfysisk.no/faggrupper/faggruppe-akustikk/sspa/">↗️</a></li>
+            <li>WAVES 2024 (16th International Conference on Mathematical and Numerical Aspects of Wave Propagation), Berlin, Germany, June 2024. <a href="https://waves2024.mps.mpg.de/">↗️</a></li>
+            <li>11th International Conference on Inverse Problems in Engineering (ICIPE24), Rio de Janeiro, Brazil, June 2024. <a href="https://icipe2024.org/">↗️</a></li>
+            <li>11th International Conference on Inverse Problems in Modeling and Simulations (IPMS 2024), Malta, May 2024. <a href="https://www.ipms-conference.org/ipms2024/">↗️</a></li>
+            <li>11th Applied Inverse Problems Conference (AIP 2023), Göttingen, Germany, September 2023. <a href="https://aip2023.de/">↗️</a></li>
+            <li>10th International Conference on Inverse Problems, Control and Shape Optimization (PICOF'22), Caen, France, October 2022. <a href="https://picof22.sciencesconf.org/">↗️</a></li>
+            <li>10th International Conference on Inverse Problems in Engineering (ICIPE20), Francavilla al Mare (Chieti), Italy, May 2022. <a href="https://iopscience.iop.org/article/10.1088/1742-6596/2444/1/011001">↗️</a></li>
+            <!-- END CONF TALKS -->
+          </ul>
+        </article>
 
-  <h3>Other Talks</h3>
-
-    <!-- BEGIN OTHER TALKS -->
-<li>Journées Scientifiques AGAP Qualité Géophysique Appliquée, Poitiers, France, March 2024. <a href="https://www.agapqualite.org/2023/07/11/journees-scientifiques-agap-26-au-28-mars-2024/" style="text-decoration:none">↗️</a></li>
-<li>Congrès des Jeunes Chercheurs en Mécanique (Méca-J 2023), Online, August 2023. <a href="https://mecaj2023.sciencesconf.org/" style="text-decoration:none">↗️</a></li>
-<li>11ème Biennale de la Société de Mathématiques Appliquées et Industrielles (SMAI 2023), Le Gosier, Guadeloupe, France, May 2023. <a href="https://smai2023.math.cnrs.fr/fr/" style="text-decoration:none">↗️</a></li>
-<li>Congrès Français de Mécanique (CFM 2022), Nantes, France, August 2022. <a href="https://cfm2022.fr/" style="text-decoration:none">↗️</a></li>
-<li>45ème Congrès National d'Analyse Numérique (CANUM 2022), Évian-les-Bains, France, June 2022. <a href="https://canum2020.math.cnrs.fr" style="text-decoration:none">↗️</a></li>
-<li>Congrès des Jeunes Chercheurs en Mécanique (Méca-J 2021), Online, August 2021. <a href="http://meca-j.sciencesconf.org" style="text-decoration:none">↗️</a></li>
-<li>10ème Biennale de la Société de Mathématiques Appliquées et Industrielles (SMAI 2021), La Grande-Motte, France, June 2021. <a href="https://smai2021.math.univ-toulouse.fr" style="text-decoration:none">↗️</a></li>
-<li>9ème Biennale de la Société de Mathématiques Appliquées et Industrielles (SMAI 2019), Guidel-Plages (Morbihan), France, May 2019. <a href="http://smai.emath.fr/smai2019/index.php" style="text-decoration:none">↗️</a></li>
-<!-- END OTHER TALKS -->
-  </ul>
-</section>
+        <article class="subsection-card">
+          <h3>Other Talks</h3>
+          <ul class="talk-list">
+            <!-- BEGIN OTHER TALKS -->
+            <li>Journées Scientifiques AGAP Qualité Géophysique Appliquée, Poitiers, France, March 2024. <a href="https://www.agapqualite.org/2023/07/11/journees-scientifiques-agap-26-au-28-mars-2024/">↗️</a></li>
+            <li>Congrès des Jeunes Chercheurs en Mécanique (Méca-J 2023), Online, August 2023. <a href="https://mecaj2023.sciencesconf.org/">↗️</a></li>
+            <li>11ème Biennale de la Société de Mathématiques Appliquées et Industrielles (SMAI 2023), Le Gosier, Guadeloupe, France, May 2023. <a href="https://smai2023.math.cnrs.fr/fr/">↗️</a></li>
+            <li>Congrès Français de Mécanique (CFM 2022), Nantes, France, August 2022. <a href="https://cfm2022.fr/">↗️</a></li>
+            <li>45ème Congrès National d'Analyse Numérique (CANUM 2022), Évian-les-Bains, France, June 2022. <a href="https://canum2020.math.cnrs.fr">↗️</a></li>
+            <li>Congrès des Jeunes Chercheurs en Mécanique (Méca-J 2021), Online, August 2021. <a href="http://meca-j.sciencesconf.org">↗️</a></li>
+            <li>10ème Biennale de la Société de Mathématiques Appliquées et Industrielles (SMAI 2021), La Grande-Motte, France, June 2021. <a href="https://smai2021.math.univ-toulouse.fr">↗️</a></li>
+            <li>9ème Biennale de la Société de Mathématiques Appliquées et Industrielles (SMAI 2019), Guidel-Plages (Morbihan), France, May 2019. <a href="http://smai.emath.fr/smai2019/index.php">↗️</a></li>
+            <!-- END OTHER TALKS -->
+          </ul>
+        </article>
+      </div>
+    </section>
 
 
 
 
 
     <!-- Education -->
-    <section id="education">
+    <section id="education" class="section-card">
       <h2>🎓 Education</h2>
-      
+      <ul class="timeline-list">
         <li><strong>PhD (2021)</strong> – Applied Mathematics, University of Caen Normandy, France</li>
         <li><strong>MSc (2018)</strong> – Optimization & Mathematical Physics, University of Toulon, France</li>
         <li><strong>BSc (2016)</strong> – Mathematics, University Jean-Monnet, Saint-Etienne, France</li>
@@ -186,8 +222,9 @@ Previously, I was a postdoctoral researcher with the <a href="https://idefix.git
     </section>
 
     <!-- Positions -->
-    <section id="positions">
+    <section id="positions" class="section-card">
       <h2>👩‍💻 Positions</h2>
+      <ul class="timeline-list">
         <li>Postdoctoral Research Fellow – University of Oslo, Norway (2024–present)</li>
         <li>Postdoctoral Researcher – INRIA/EDF/ENSTA (IDEFIX), France (2022–2024)</li>
         <li>Assistant Professor – Polytech Clermont, Clermont Auvergne INP, France (2021–2022)</li>
@@ -196,21 +233,22 @@ Previously, I was a postdoctoral researcher with the <a href="https://idefix.git
     </section>
 
     <!-- Contact -->
-    <section id="contact">
+    <section id="contact" class="section-card">
       <h2>📫 Contact</h2>
-      <p>Email: <a href="mailto:mohambo@ifi.uio.no">mohambo@ifi.uio.no</a></p>
-      <p>
-        <a href="https://scholar.google.nl/citations?user=xGQ8NdMAAAAJ&hl=en">Google Scholar</a> • 
-        <a href="https://orcid.org/0000-0002-4472-2019">ORCID</a> • 
-        <a href="https://nva.sikt.no/research-profile/1794372">NVA</a> • 
-         <a href="https://www.linkedin.com/in/mohamed-aziz-boukraa/">Linkedin</a> • 
+      <p class="section-intro">Email: <a href="mailto:mohambo@ifi.uio.no">mohambo@ifi.uio.no</a></p>
+      <div class="contact-links" aria-label="Academic and professional links">
+        <a href="https://scholar.google.nl/citations?user=xGQ8NdMAAAAJ&hl=en">Google Scholar</a>
+        <a href="https://orcid.org/0000-0002-4472-2019">ORCID</a>
+        <a href="https://nva.sikt.no/research-profile/1794372">NVA</a>
+        <a href="https://www.linkedin.com/in/mohamed-aziz-boukraa/">LinkedIn</a>
         <a href="https://med-aziz-boukraa.github.io/">Website</a>
-      </p>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 Mohamed Aziz Boukraa | <a href="CV.pdf" target="_blank">Download CV</a></p>
+    <p>© 2026 Mohamed Aziz Boukraa | <a href="CV.pdf" target="_blank">Download CV</a></p>
+    <p class="last-updated">Last updated: 8 March 2026</p>
   </footer>
 </body>
 </html>
