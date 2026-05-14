@@ -20,7 +20,7 @@ def latex_to_unicode(s: str) -> str:
         r"{\^a}": "â", r"{\^e}": "ê", r"{\^i}": "î", r"{\^o}": "ô", r"{\^u}": "û",
         r"{\"a}": "ä", r"{\"e}": "ë", r"{\"i}": "ï", r"{\"o}": "ö", r"{\"u}": "ü",
         r"{\~n}": "ñ", r"{\c{c}}": "ç",
-        r"\\&": "&"
+        r"\&": "&"
     }
     for latex, uni in replacements.items():
         s = s.replace(latex, uni)
