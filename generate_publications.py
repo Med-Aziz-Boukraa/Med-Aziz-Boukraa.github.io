@@ -2,6 +2,7 @@ from pathlib import Path
 import bibtexparser
 import re
 import subprocess
+from datetime import date
 
 # --------- CONFIG ---------
 pubfile = Path("Publications.bib")
@@ -143,6 +144,17 @@ def replace_between_markers(text, begin_marker, end_marker, new_content):
         raise ValueError(f"Markers {begin_marker} / {end_marker} not found")
     return text[: start + len(begin_marker)] + "\n" + new_content + "\n" + text[end:]
 
+
+def update_last_updated_date(html_text: str) -> str:
+    today = date.today()
+    today_str = f"{today.day} {today.strftime('%B %Y')}"
+    return re.sub(
+        r'(<p class="last-updated">Last updated: ).*?(</p>)',
+        rf'\g<1>{today_str}\g<2>',
+        html_text,
+        count=1,
+    )
+
 # --------- MAIN ---------
 # Publications
 with open(pubfile) as f:
@@ -229,6 +241,7 @@ html = replace_between_markers(
     html, "<!-- BEGIN OTHER TALKS -->", "<!-- END OTHER TALKS -->",
     "\n".join(other_talks_html)
 )
+html = update_last_updated_date(html)
 htmlfile.write_text(html, encoding="utf-8")
 print("✅ Updated index.html with journals, conferences, and talks")
 
