@@ -12,6 +12,58 @@ htmlfile = Path("index.html")
 author_to_bold = "Boukraa"
 # --------------------------
 
+MONTHS = {
+    "jan": 1, "january": 1,
+    "feb": 2, "february": 2,
+    "mar": 3, "march": 3,
+    "apr": 4, "april": 4,
+    "may": 5,
+    "jun": 6, "june": 6,
+    "jul": 7, "july": 7,
+    "aug": 8, "august": 8,
+    "sep": 9, "sept": 9, "september": 9,
+    "oct": 10, "october": 10,
+    "nov": 11, "november": 11,
+    "dec": 12, "december": 12,
+}
+
+
+def parse_int(value, default=0):
+    match = re.search(r"\d+", str(value or ""))
+    return int(match.group()) if match else default
+
+
+def parse_month(value):
+    value = str(value or "").strip("{} ").lower()
+    if not value:
+        return 0
+    if value.isdigit():
+        return int(value)
+    return MONTHS.get(value[:3], MONTHS.get(value, 0))
+
+
+def entry_year(entry):
+    year = parse_int(entry.get("year"))
+    if year:
+        return str(year)
+
+    date_value = str(entry.get("date", "")).strip("{} ")
+    match = re.match(r"(\d{4})", date_value)
+    return match.group(1) if match else ""
+
+
+def entry_date_key(entry):
+    date_value = str(entry.get("date", "")).strip("{} ")
+    match = re.match(r"(\d{4})(?:[-/](\d{1,2}|[A-Za-z]+))?(?:[-/](\d{1,2}))?", date_value)
+    if match:
+        year = int(match.group(1))
+        month = parse_month(match.group(2))
+        day = parse_int(match.group(3))
+        return year, month, day
+
+    return parse_int(entry.get("year")), parse_month(entry.get("month")), 0
+
+
 def latex_to_unicode(s: str) -> str:
     """Convert common LaTeX accents to Unicode for HTML output."""
     replacements = {
@@ -48,7 +100,7 @@ def format_publication(entry, html=False):
     etype = entry["ENTRYTYPE"].lower()
     authors = format_authors(entry.get("author", ""), html=html)
     title = entry.get("title", "").strip("{}")
-    year = entry.get("year", "")
+    year = entry_year(entry)
     doi = entry.get("doi", "")
     hal = entry.get("hal_id", "") or entry.get("url", "")
 
@@ -163,7 +215,7 @@ with open(pubfile) as f:
 journal_tex_entries, conf_tex_entries = [], []
 journal_html_entries, conf_html_entries = [], []
 
-bib.entries.sort(key=lambda e: e.get("year", "0"), reverse=True)
+bib.entries.sort(key=entry_date_key, reverse=True)
 
 for entry in bib.entries:
     cat, line = format_publication(entry, html=False)
